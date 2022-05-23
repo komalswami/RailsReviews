@@ -1,6 +1,8 @@
 module Api
     module V1
        class RestosController <  ApplicationController
+        protect_from_forgery with: :null_session
+        
          # GET /api/v1/airlines
         def index
             restos=Resto.all
